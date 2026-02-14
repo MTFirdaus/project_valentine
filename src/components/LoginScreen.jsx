@@ -9,7 +9,7 @@ const LoginScreen = ({ onLogin }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     
-    if (password === '1402') {
+    if (password === 'mlfy') {
       onLogin(true)
     } else {
       setError(true)

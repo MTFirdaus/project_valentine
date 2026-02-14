@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import myPhoto from '../thoriq.png' // Pastikan path ini benar
 
 const AboutThoriq = () => {
   return (
@@ -6,38 +7,61 @@ const AboutThoriq = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="max-w-2xl mx-auto"
+        className="max-w-3xl mx-auto" // Diperlebar sedikit max-w-nya
       >
-        <div className="text-center mb-8">
+        
+        {/* --- BAGIAN HEADER (FOTO & TEKS BERSEBELAHAN) --- */}
+        {/* Kita ubah div pembungkus ini jadi Flex container.
+            - flex flex-col md:flex-row : Di HP numpuk (col), di desktop sejajar (row).
+            - items-center : Rata tengah secara vertikal.
+            - gap-8 : Jarak antara foto dan teks.
+        */}
+        <div className="flex flex-col md:flex-row items-center gap-8 mb-10">
+          
+          {/* 1. FOTO CONTAINER (Kiri di Desktop) */}
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-            className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500 p-1"
+            // Hapus 'mx-auto' dan 'mb-6'. Tambah 'flex-shrink-0' biar foto gak penyet.
+            // Ukuran disesuaikan: agak kecil di HP (w-32), besar di desktop (md:w-40).
+            className="w-32 h-32 md:w-40 md:h-40 flex-shrink-0 rounded-full bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500 p-1 shadow-2xl"
           >
-            <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center">
-              <span className="text-6xl">👨‍💻</span>
+            <div className="w-full h-full rounded-full overflow-hidden bg-gray-800 border-4 border-gray-900">
+              <img 
+                src={myPhoto} 
+                alt="Thoriq" 
+                className="w-full h-full object-cover object-top" 
+              />
             </div>
           </motion.div>
 
-          <motion.h1
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="text-4xl font-bold text-white mb-2 font-display"
-          >
-            Thoriq
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="text-xl text-purple-300 mb-4 font-body"
-          >
-            Your Boyfriend & Developer
-          </motion.p>
+          {/* 2. TEKS CONTAINER (Kanan di Desktop) */}
+          {/* text-center md:text-left : Di HP rata tengah, di desktop rata kiri. */}
+          <div className="text-center md:text-left">
+            <motion.h1
+              initial={{ opacity: 0, x: -20 }} // Animasi muncul dari kiri
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3 }}
+              // Ukuran font diperbesar sedikit di desktop
+              className="text-3xl md:text-5xl font-bold text-white mb-2 font-display"
+            >
+              M Thoriq Firdaus
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.4 }}
+              className="text-xl md:text-2xl text-purple-300 font-body"
+            >
+              Developer
+            </motion.p>
+          </div>
         </div>
+        {/* --- AKHIR BAGIAN HEADER --- */}
 
+
+        {/* Konten sisanya sama seperti sebelumnya */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -45,14 +69,13 @@ const AboutThoriq = () => {
           className="glass-morphism rounded-2xl p-6 mb-6"
         >
           <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2 font-display">
-            <span>💝</span>
             <span>About Me</span>
           </h2>
           <p className="text-gray-300 leading-relaxed mb-4 font-body">
-            I created this entire operating system just for you because you deserve something as unique and special as you are. Every line of code, every animation, and every detail was crafted with love.
+            Hai! aku developer dari web ini.
           </p>
           <p className="text-gray-300 leading-relaxed font-body">
-            You inspire me to create beautiful things, and this is just one small way to show how much you mean to me. Happy Valentine's Day, my love! ❤️
+            Saskia menginspirasiku untuk menciptakan hal-hal indah, dan ini hanyalah salah satu cara kecil untuk menunjukkan betapa berartinya dia bagiku. Selamat Hari Valentine, sayangku!
           </p>
         </motion.div>
 
@@ -65,7 +88,7 @@ const AboutThoriq = () => {
           <StatCard icon="💻" label="Lines of Code" value="2,000+" color="from-blue-500 to-cyan-500" />
           <StatCard icon="⏱️" label="Hours Spent" value="20+" color="from-purple-500 to-pink-500" />
           <StatCard icon="☕" label="Coffee Consumed" value="∞" color="from-amber-500 to-orange-500" />
-          <StatCard icon="❤️" label="Love Level" value="Maximum" color="from-red-500 to-pink-500" />
+          <StatCard icon="🚀" label="Love Level" value="Maximum" color="from-red-500 to-pink-500" />
         </motion.div>
 
         <motion.div
@@ -79,7 +102,7 @@ const AboutThoriq = () => {
             <span>Built With</span>
           </h2>
           <div className="flex flex-wrap gap-2">
-            {['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'JavaScript', 'CSS3', 'Love ❤️'].map((skill, index) => (
+            {['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'JavaScript', 'CSS3', 'Love'].map((skill, index) => (
               <motion.span
                 key={skill}
                 initial={{ opacity: 0, scale: 0 }}
@@ -100,7 +123,7 @@ const AboutThoriq = () => {
           className="mt-6 text-center"
         >
           <p className="text-gray-400 text-sm font-body italic">
-            "The best code I've ever written is the code that makes you smile" 💕
+            "best project yang aku buat SASKIA" 💕
           </p>
         </motion.div>
       </motion.div>

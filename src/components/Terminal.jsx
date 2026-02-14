@@ -28,7 +28,7 @@ const Terminal = () => {
       { type: 'output', text: '' },
     ],
     date: () => [
-      { type: 'output', text: '💕 Our Special Date: February 14, 2024' },
+      { type: 'output', text: '💕 Our Special Date: Desember 31, 2023' },
       { type: 'output', text: '   Days together: ' + Math.floor((new Date() - new Date('2024-02-14')) / (1000 * 60 * 60 * 24)) + ' days' },
       { type: 'output', text: '   Status: Forever and counting... ∞' },
       { type: 'output', text: '' },
@@ -66,10 +66,10 @@ const Terminal = () => {
     ],
     reasons: () => [
       { type: 'output', text: '💝 Reasons Why I Love You:' },
-      { type: 'output', text: '   1. Your beautiful smile lights up my world' },
-      { type: 'output', text: '   2. Your kindness and caring heart' },
-      { type: 'output', text: '   3. The way you make me laugh' },
-      { type: 'output', text: '   4. Your endless support and love' },
+      { type: 'output', text: '   1. Kamu cantiikk' },
+      { type: 'output', text: '   2. Lucuu' },
+      { type: 'output', text: '   3. Kadang nekatt' },
+      { type: 'output', text: '   4. Gatau yaa gaada alasan aku sayang kamu, yaa sayang aja tuu' },
       { type: 'output', text: '   5. Simply being you ❤️' },
       { type: 'output', text: '' },
     ],

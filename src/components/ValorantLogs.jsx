@@ -4,38 +4,38 @@ const ValorantLogs = () => {
   const matchHistory = [
     {
       id: 1,
-      map: 'First Date Cafe',
-      date: 'Jan 14, 2024',
+      map: 'Firs Date',
+      date: 'December 2023',
       result: 'Victory',
       love: 95,
-      hugs: 12,
-      kisses: 8,
+      hugs: 3,
+      kisses: 0,
       mvp: true,
     },
     {
       id: 2,
-      map: 'Beach Sunset',
+      map: 'Movie Night',
       date: 'Feb 10, 2024',
       result: 'Victory',
       love: 100,
       hugs: 15,
-      kisses: 20,
+      kisses: 8,
       mvp: true,
     },
     {
       id: 3,
-      map: 'Movie Theater',
-      date: 'Feb 14, 2024',
+      map: 'Bukber',
+      date: 'apr 15, 2024',
       result: 'Victory',
       love: 100,
-      hugs: 18,
-      kisses: 25,
+      hugs: 0,
+      kisses: 0,
       mvp: true,
     },
     {
       id: 4,
-      map: 'Picnic Park',
-      date: 'Mar 05, 2024',
+      map: 'Candid School',
+      date: 'feb 20, 2024',
       result: 'Victory',
       love: 98,
       hugs: 20,
@@ -44,12 +44,12 @@ const ValorantLogs = () => {
     },
     {
       id: 5,
-      map: 'Coffee Shop Corner',
-      date: 'Mar 20, 2024',
+      map: 'Birthday',
+      date: 'jan 3, 2024',
       result: 'Victory',
       love: 100,
-      hugs: 10,
-      kisses: 12,
+      hugs: 5,
+      kisses: 0,
       mvp: true,
     },
   ]
@@ -69,7 +69,7 @@ const ValorantLogs = () => {
           <span className="text-4xl">🎮</span>
           <div>
             <h2 className="text-3xl font-display font-bold text-white">Love Match History</h2>
-            <p className="text-gray-400 font-body">Every moment with you is a victory</p>
+            <p className="text-gray-400 font-body">Kurang lebih segini ga sih HAHAH</p>
           </div>
         </div>
 

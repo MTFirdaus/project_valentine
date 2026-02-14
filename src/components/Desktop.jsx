@@ -168,7 +168,7 @@ const Desktop = () => {
         <DesktopIcon icon="💌" label="Love Letters" onClick={() => openWindow('Love Letters', 
           <div className="p-6 text-white">
             <h2 className="text-2xl font-bold mb-4">My Dearest,</h2>
-            <p className="leading-relaxed">Every moment with you feels like a dream come true. You make my world brighter and my heart fuller. Happy Valentine's Day! ❤️</p>
+            <p className="leading-relaxed">Setiap momen bersamamu terasa seperti mimpi yang menjadi kenyataan. Kamu membuat duniaku lebih cerah dan hatiku lebih penuh. Selamat Hari Valentine Saskia Sayang!</p>
           </div>
         )} />
       </div>
@@ -275,7 +275,7 @@ const Desktop = () => {
         isVisible={showNotification}
         onClose={() => setShowNotification(false)}
         title="New Message from Thoriq"
-        message="Happy Valentine's Day, my love! I hope you enjoy exploring this special OS I made just for you. Every feature was crafted with love and care. Click around and have fun! 💕"
+        message="Selamat Hari Valentine, Zass! langsung ajaa tes OS  spesial yang kubuat buat kamuu. Setiap fiturnya udah aku isi yang pernah kita jalanin hehe meskipun ga semua yaa!!!"
         icon="💝"
       />
     </motion.div>
